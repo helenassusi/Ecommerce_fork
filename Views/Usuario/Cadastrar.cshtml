@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Cadastrar Usuário";
+}
+
+
+<div class="text-center">
+    <h2>Cadastrar Usuário</h2>
+    <form method="post">
+        <input name="Nome" placeholder="Nome" /><br />
+        <input name="Email" placeholder="E-mail" /><br />
+        <input name="Senha" placeholder="Senha" type="password" /><br />
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="/Home/Index" class="btn btn-secondary">Voltar</a>
+        <p>Já tem cadastro? Então faça o login e aproveite nosso catálogo de produtos. 😊</p>
+        <a href="/Usuario/Login" class="btn btn-primary">Login</a>
+    </form>
+    <p>@ViewBag.Mensagem</p>
+</div>
+

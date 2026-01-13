@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<div class="text-center">
+    <h2>Login</h2>
+    <form method="post">
+        <input type="text" name="email" placeholder="E-mail" /><br />
+        <input type="password" name="senha" placeholder="Senha" /><br />
+        <button type="submit" class="btn btn-success">Entrar</button>
+        <a href="/Home/Index" class="btn btn-secondary">Voltar</a>
+        <p>Não tem conta? Faça seu cadastro agora mesmo. 😊</p>
+        <a href="/Usuario/Cadastrar" class="btn btn-secondary">Cadastrar</a>
+    </form>
+    <p>@ViewBag.Mensagem</p>
+</div>

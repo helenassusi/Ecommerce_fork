@@ -1,0 +1,41 @@
+﻿@model List<Esse_deu_certo_MVC_Exemplo.Models.ItemCarrinho>
+
+<h2>🛒 Meu Carrinho</h2>
+
+@if (!Model.Any())
+{
+    <p>Seu carrinho está vazio.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NomeProduto</td>
+                    <td>R$ @item.Preco.ToString("F2")</td>
+                    <td>@item.Quantidade</td>
+                    <td>R$ @item.Total.ToString("F2")</td>
+                    <td>
+                        <a asp-action="Remover" asp-route-id="@item.ProdutoId" class="btn btn-danger btn-sm">🗑️</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-end">
+        <a asp-controller="Carrinho" asp-action="Limpar" class="btn btn-secondary">🧹 Limpar</a>
+        <a asp-controller="Checkout" asp-action="Index" class="btn btn-success">💳 Finalizar Compra</a>
+    </div>
+}

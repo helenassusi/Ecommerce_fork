@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Esse_deu_certo_MVC_Exemplo.Models.ItemCarrinho>
+
+@{
+    ViewData["Title"] = "Finalizar Compra";
+}
+
+<div class="container mt-5">
+    <h2>🛒 Finalizar Compra</h2>
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <p>Seu carrinho está vazio.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.NomeProduto</td>
+                        <td>R$ @item.Preco.ToString("F2")</td>
+                        <td>@item.Quantidade</td>
+                        <td>R$ @((item.Preco * item.Quantidade).ToString("F2"))</td> <!--Modificar-->
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h4 class="text-end">💰 Total: <strong>R$ @ViewBag.Total.ToString("F2")</strong></h4>
+
+        <form asp-action="ConfirmarCompra" method="post">
+            <h4>Escolha a forma de pagamento</h4>
+
+            <div class="form-check">
+                <input type="radio" id="credito" name="metodoPagamento" value="Cartão de Crédito" checked>
+                <label for="credito">
+                    <i class="fa-brands fa-cc-visa" style="color:#1a1f71;"></i>
+                    <i class="fa-brands fa-cc-mastercard" style="color:#eb001b;"></i>
+                    Cartão de Crédito
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" id="pix" name="metodoPagamento" value="Pix">
+                <label for="pix">
+                    <i class="fa-solid fa-qrcode" style="color:#00b894;"></i> Pix
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" id="boleto" name="metodoPagamento" value="Boleto Bancário">
+                <label for="boleto">
+                    <i class="fa-solid fa-barcode" style="color:#6c757d;"></i> Boleto Bancário
+                </label>
+            </div>
+
+
+            <form asp-action="ConfirmarCompra" method="post">
+                <button type="submit" class="btn btn-success btn-lg w-100 mt-3">
+                    ✅ Confirmar Compra
+                </button>
+            </form>
+
+
+        </form>
+    }
+</div>

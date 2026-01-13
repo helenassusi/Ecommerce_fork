@@ -1,0 +1,15 @@
+﻿@model Esse_deu_certo_MVC_Exemplo.Models.Categoria
+
+<h2>Editar Categoria</h2>
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Nome</label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Salvar Alterações</button>
+    <a href="/Categoria/Index" class="btn btn-secondary">Cancelar</a>
+</form>

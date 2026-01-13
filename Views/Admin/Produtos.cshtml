@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Esse_deu_certo_MVC_Exemplo.Models.Produto>
+
+<h2>Gerenciar Produtos</h2>
+
+<a href="/Admin/CadastrarProduto" class="btn btn-primary">+ Novo Produto</a>
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Nome</td>
+                <td>R$ @p.Preco.ToString("F2")</td>
+                <td>@p.Categoria?.Nome</td>
+                <td>
+                    <a href="/Admin/EditarProduto/@p.Id" class="btn btn-primary">Editar</a> |
+                    <a href="/Admin/ExcluirProduto/@p.Id" onclick="return confirm('Excluir este produto?')" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Admin/Dashboard" class="btn btn-primary">Voltar</a>

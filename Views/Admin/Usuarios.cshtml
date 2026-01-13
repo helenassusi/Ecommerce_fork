@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Esse_deu_certo_MVC_Exemplo.Models.Usuario>
+
+<h2>Usuários Cadastrados</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.Nome</td>
+                <td>@u.Email</td>
+                <td>@u.Tipo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Admin/Dashboard" class="btn btn-primary">Voltar</a>
