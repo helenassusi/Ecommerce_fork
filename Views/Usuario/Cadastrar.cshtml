@@ -3,17 +3,46 @@
 }
 
 
-<div class="text-center">
-    <h2><span class="brand">Cadastrar Usuário</span></h2>
-    <form method="post">
-        <input name="Nome" placeholder="Nome" /><br />
-        <input name="Email" placeholder="E-mail" /><br />
-        <input name="Senha" placeholder="Senha" type="password" /><br />
-        <button type="submit" class="btn btn-outline-light btn-lg">Salvar</button>
-        <a href="/Home/Index" class="btn btn-outline-light btn-lg">Voltar</a>
-        <p><span class="brand">Já tem cadastro? Então faça o login e aproveite nosso catálogo de produtos. 😊</span></p>
-        <a href="/Usuario/Login" class="btn btn-outline-light btn-lg">Login</a>
-    </form>
-    <p>@ViewBag.Mensagem</p>
-</div>
+<div class="login-container text-center">
 
+    <div class="login-card">
+
+        <h2><span class="brand">Cadastrar Usuário</span></h2>
+
+        <form method="post">
+
+            <input name="Nome" placeholder="Nome" class="login-input" />
+
+            <input name="Email" placeholder="E-mail" class="login-input" />
+
+            <input name="Senha" placeholder="Senha" type="password" class="login-input" />
+
+            <div class="login-buttons">
+
+                <button type="submit" class="btn btn-outline-light btn-lg">
+                    Salvar
+                </button>
+
+                <a href="/Home/Index" class="btn btn-outline-light btn-lg">
+                    Voltar
+                </a>
+
+            </div>
+
+            <p class="login-text">
+                <span class="brand">
+                    Já tem cadastro? Então faça o login e aproveite nosso catálogo de produtos. 😊
+                </span>
+            </p>
+
+            <a href="/Usuario/Login" class="btn btn-outline-light btn-lg">
+                Login
+            </a>
+
+        </form>
+
+        <p class="login-message">@ViewBag.Mensagem</p>
+
+    </div>
+
+</div>

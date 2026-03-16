@@ -1,15 +1,44 @@
 ﻿@{
     ViewBag.Title = "Login";
 }
-<div class="text-center">
-    <h2><span class="brand">Login</span></h2>
-    <form method="post">
-        <input type="text" name="email" placeholder="E-mail" /><br />
-        <input type="password" name="senha" placeholder="Senha" /><br />
-        <button type="submit" class="btn btn-outline-light btn-lg">Entrar</button>
-        <a href="/Home/Index" class="btn btn-outline-light btn-lg">Voltar</a>
-        <p><span class="brand">Não tem conta? Faça seu cadastro agora mesmo. 😊</span></p>
-        <a href="/Usuario/Cadastrar" class="btn btn-outline-light btn-lg">Cadastrar</a>
-    </form>
-    <p>@ViewBag.Mensagem</p>
+<div class="login-container text-center">
+
+    <div class="login-card">
+
+        <h2><span class="brand">Login</span></h2>
+
+        <form method="post">
+
+            <input type="text" name="email" placeholder="E-mail" class="login-input" />
+
+            <input type="password" name="senha" placeholder="Senha" class="login-input" />
+
+            <div class="login-buttons">
+
+                <button type="submit" class="btn btn-outline-light btn-lg">
+                    Entrar
+                </button>
+
+                <a href="/Home/Index" class="btn btn-outline-light btn-lg">
+                    Voltar
+                </a>
+
+            </div>
+
+            <p class="login-text">
+                <span class="brand">
+                    Não tem conta? Faça seu cadastro agora mesmo. 😊
+                </span>
+            </p>
+
+            <a href="/Usuario/Cadastrar" class="btn btn-outline-light btn-lg">
+                Cadastrar
+            </a>
+
+        </form>
+
+        <p class="login-message">@ViewBag.Mensagem</p>
+
+    </div>
+
 </div>

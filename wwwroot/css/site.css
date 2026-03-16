@@ -82,10 +82,199 @@ body {
     font-size: 1.2rem;
     color: #00e5ff;
     font-weight: 500;
-}
-
-.box-shadow[b-igk864xn0v] {
+}.box-shadow[b-igk864xn0v] {
     background: linear-gradient( rgba(10,10,30,0.9), rgba(10,10,30,0.9) ), url('/images/robots-bg.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.carousel {
+    margin-bottom: 80px;
+}
+
+.carousel img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #000000;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #000000;
+}
+
+.footer-robo {
+    background: linear-gradient(180deg, #0b0f2a, #050816);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(0,255,255,0.2);
+}
+
+.footer-brand {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.footer-links {
+    margin-top: 25px;
+}
+
+.footer-btn {
+    margin: 10px;
+    padding: 10px 25px;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+    .footer-btn:hover {
+        background: #00f7ff;
+        color: black;
+        box-shadow: 0 0 15px #00f7ff;
+    }
+
+.footer-copy {
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.footer-robo::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f7ff, transparent);
+    margin-bottom: 40px;
+}
+
+.navbar-robo {
+    background: rgba(10,15,40,0.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,255,255,0.2);
+}
+
+.brand {
+    font-weight: bold;
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.nav-robo {
+    color: white !important;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+    .nav-robo:hover {
+        color: #00f7ff !important;
+        text-shadow: 0 0 10px #00f7ff;
+    }
+
+.welcome-user {
+    color: #00ff9c !important;
+    font-weight: 600;
+}
+
+.admin-link {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+.logout-btn {
+    color: #ff4d4d !important;
+}
+
+.btn-nav {
+    padding: 8px 20px;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+    .btn-nav:hover {
+        background: #00f7ff;
+        color: black;
+        box-shadow: 0 0 15px #00f7ff;
+    }
+
+.btn-nav-primary {
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: linear-gradient(45deg,#00f7ff,#007bff);
+    color: white;
+    text-decoration: none;
+}
+
+    .btn-nav-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #00f7ff;
+    }
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.login-card {
+    background: rgba(10,15,40,0.75);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,255,255,0.3);
+    box-shadow: 0 0 25px rgba(0,255,255,0.15);
+    width: 350px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.3);
+    border-radius: 8px;
+    color: white;
+}
+
+    .login-input:focus {
+        outline: none;
+        border-color: #00f7ff;
+        box-shadow: 0 0 10px #00f7ff;
+    }
+
+.login-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-text {
+    margin-top: 20px;
+}
+
+.login-message {
+    margin-top: 15px;
+    color: #ff6b6b;
+    font-weight: 600;
 }

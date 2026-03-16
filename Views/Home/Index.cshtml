@@ -30,3 +30,98 @@
     </div>
 
 </section>
+
+<div id="myPlot" style="width:100%;max-width:900px"></div>
+
+<script>
+
+    const xArray = ["Itália", "França", "Espanha", "EUA", "Argentina"];
+    const yArray = [55, 49, 44, 24, 15];
+
+    const data = [{
+        labels: xArray,
+        values: yArray,
+        type: "pie",
+        hole: .35,
+        textinfo: "label+percent",
+        hoverinfo: "label+percent+value",
+        marker: {
+            colors: [
+                "#00f7ff",
+                "#007bff",
+                "#00ff9c",
+                "#ff3b3b",
+                "#b86bff"
+            ]
+        }
+    }];
+
+    const layout = {
+        title: {
+            text: "Vendas globais de robôs RoboForge",
+            font: {
+                size: 24,
+                color: "#ffffff"
+            }
+        },
+
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+
+        font: {
+            color: "#ffffff"
+        },
+
+        showlegend: true
+    };
+
+    const config = {
+        responsive: true,
+        displayModeBar: true
+    };
+
+    Plotly.newPlot("myPlot", data, layout, config);
+
+</script>
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://forbes.com.br/wp-content/uploads/2021/09/ForbesTech_robo-humanoide_Andriy-Onufriyenko_Getty-Images-900x600.png" class="d-block w-100">
+
+            <div class="carousel-caption">
+                <h2>Robôs Inteligentes</h2>
+                <p>Tecnologia que transforma o futuro</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://www.correiobraziliense.com.br/cbradar/wp-content/uploads/2025/03/robos_1742321492248-1140x570.jpg" class="d-block w-100">
+
+            <div class="carousel-caption">
+                <h2>Automação Avançada</h2>
+                <p>Soluções robóticas para o mundo moderno</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://diariodocomercio.com.br/mix/wp-content/uploads/2025/11/image-99-1140x570.png" class="d-block w-100">
+
+            <div class="carousel-caption">
+                <h2>RoboForge</h2>
+                <p>Construindo o futuro da robótica</p>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

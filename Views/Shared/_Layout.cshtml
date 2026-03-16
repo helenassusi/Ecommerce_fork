@@ -9,58 +9,71 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Esse_deu_certo_MVC_Exemplo.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-robo border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/Home/Index"><span class="brand">🛒 Minha Loja</span></a>
+
+                <a class="navbar-brand" href="/Home/Index">
+                    <span class="brand">🤖 RoboForge</span>
+                </a>
+
                 <div class="collapse navbar-collapse">
+
                     <ul class="navbar-nav ms-auto">
+
                         @if (Context.Session.GetString("UsuarioNome") != null)
                         {
                             <li class="nav-item">
-                                <span class="nav-link text-success fw-semibold">
+                                <span class="nav-link welcome-user">
                                     Bem-vindo, @Context.Session.GetString("UsuarioNome")!
                                 </span>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/Produto/Index">Catálogo</a>
+                                <a class="nav-link nav-robo" href="/Produto/Index">Catálogo</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/Carrinho/Index">Carrinho</a>
+                                <a class="nav-link nav-robo" href="/Carrinho/Index">Carrinho</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/Usuario/Perfil">Meu Perfil</a>
+                                <a class="nav-link nav-robo" href="/Usuario/Perfil">Meu Perfil</a>
                             </li>
 
                             @if (Context.Session.GetString("UsuarioTipo") == "Admin")
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-warning fw-bold" href="/Admin/Dashboard">Painel Admin</a>
+                                    <a class="nav-link admin-link" href="/Admin/Dashboard">Painel Admin</a>
                                 </li>
                             }
 
                             <li class="nav-item">
                                 <form asp-controller="Usuario" asp-action="Logout" method="post" class="d-inline">
-                                    <button type="submit" class="btn btn-link nav-link text-danger">Sair</button>
+                                    <button type="submit" class="btn btn-link nav-link logout-btn">Sair</button>
                                 </form>
                             </li>
                         }
                         else
                         {
-                            <li class="btn btn-outline-light btn-lg">
-                                <a class="nav-link" href="/Usuario/Login">Login</a>
+                            <li class="nav-item">
+                                <a class="btn-nav" href="/Usuario/Login">Login</a>
                             </li>
-                            <li class="btn btn-outline-light btn-lg">
-                                <a class="nav-link" href="/Usuario/Cadastrar">Cadastrar</a>
+
+                            <li class="nav-item">
+                                <a class="btn-nav-primary" href="/Usuario/Cadastrar">Cadastrar</a>
                             </li>
                         }
+
                     </ul>
+
                 </div>
+
             </div>
         </nav>
     </header>
@@ -70,10 +83,38 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <span class="brand">&copy; 2026 - RoboForge -</span> <a asp-area="" asp-controller="Home" asp-action="Privacy" class="btn btn-outline-light btn-lg">Privacy</a>
+    <footer class="footer-robo">
+
+        <div class="container text-center">
+
+            <h3 class="footer-brand">🤖 RoboForge</h3>
+
+            <p class="footer-text">
+                Construindo o futuro da robótica e da automação inteligente.
+            </p>
+
+            <div class="footer-links">
+
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="footer-btn">
+                    Política de Privacidade
+                </a>
+
+                <a href="#" class="footer-btn">
+                    Sobre a Empresa
+                </a>
+
+                <a href="#" class="footer-btn">
+                    Feedback dos Clientes
+                </a>
+
+            </div>
+
+            <p class="footer-copy">
+                © 2026 RoboForge - Todos os direitos reservados
+            </p>
+
         </div>
+
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
