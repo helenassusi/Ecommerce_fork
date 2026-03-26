@@ -1,355 +1,160 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* 🌸 Fundo geral mais fofinho */
 body {
     margin-bottom: 60px;
-    background: linear-gradient( rgba(10,10,30,0.9), rgba(10,10,30,0.9) ), url('/images/robots-bg.jpg');
+    background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
     background-size: cover;
-    background-position: center;
-    color: white;
+    color: #5a4a5a;
+    font-family: 'Poppins', sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* ✨ Inputs e foco */
+.btn:focus, .form-control:focus {
+    box-shadow: 0 0 0 0.2rem #ffc0cb;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
-}
-
+/* 🌷 HERO SECTION */
 .hero {
-    position: relative;
-    height: 85vh;
+    height: 60vh; /* reduzido de 85vh para 60vh */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient( rgba(10,10,30,0.9), rgba(10,10,30,0.9) ), url('/images/robots-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background: linear-gradient(135deg, #ffe4ec, #d9f0ff);
+    color: #5a4a5a;
+    border-radius: 0 0 40px 40px;
+    padding: 0 20px; /* garante espaço interno lateral */
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 .brand {
-    color: #00e5ff;
-    text-shadow: 0 0 5px #00e5ff, 0 0 15px #00e5ff, 0 0 30px #00e5ff;
+    color: #ff8fab;
+    text-shadow: 0 0 10px #ffc2d1;
 }
 
 .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-top: 15px;
 }
 
 .hero-buttons {
     margin-top: 30px;
+    color: #C2185B;
 }
 
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0.95;
-}
-
-.hero-ai-text {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #00e5ff;
-    font-weight: 500;
-}.box-shadow[b-igk864xn0v] {
-    background: linear-gradient( rgba(10,10,30,0.9), rgba(10,10,30,0.9) ), url('/images/robots-bg.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.carousel {
-    margin-bottom: 80px;
-}
-
-.carousel img {
-    height: 500px;
+.carousel-item img {
+    height: 600px;
     object-fit: cover;
 }
 
-.carousel-caption h2 {
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #000000;
-}
-
-.carousel-caption p {
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #000000;
-}
-
-.footer-robo {
-    background: linear-gradient(180deg, #0b0f2a, #050816);
-    padding: 60px 0;
-    text-align: center;
+/* 🎀 BOTÕES */
+.btn-nav, .btn-nav-primary {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ffafcc;
     color: white;
-    border-top: 1px solid rgba(0,255,255,0.2);
-}
-
-.footer-brand {
-    font-size: 32px;
-    font-weight: bold;
-    color: #00f7ff;
-    text-shadow: 0 0 10px #00f7ff;
-}
-
-.footer-text {
-    margin-top: 10px;
-    font-size: 18px;
-    opacity: 0.8;
-}
-
-.footer-links {
-    margin-top: 25px;
-}
-
-.footer-btn {
-    margin: 10px;
-    padding: 10px 25px;
-    border: 1px solid #00f7ff;
-    border-radius: 8px;
     text-decoration: none;
-    color: white;
     transition: 0.3s;
 }
 
-    .footer-btn:hover {
-        background: #00f7ff;
-        color: black;
-        box-shadow: 0 0 15px #00f7ff;
+    .btn-nav:hover, .btn-nav-primary:hover {
+        background: #ff8fab;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(255, 143, 171, 0.4);
     }
 
-.footer-copy {
-    margin-top: 30px;
-    font-size: 14px;
-    opacity: 0.6;
-}
-
-.footer-robo::before {
-    content: "";
-    display: block;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #00f7ff, transparent);
-    margin-bottom: 40px;
-}
-
+/* 🍰 NAVBAR */
 .navbar-robo {
-    background: rgba(10,15,40,0.75);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,255,255,0.2);
-}
-
-.brand {
-    font-weight: bold;
-    color: #00f7ff;
-    text-shadow: 0 0 10px #00f7ff;
+    border-bottom: 1px solid #ffc2d1;
 }
 
 .nav-robo {
-    color: white !important;
-    margin-right: 10px;
-    transition: 0.3s;
+    color: #5a4a5a !important;
 }
 
     .nav-robo:hover {
-        color: #00f7ff !important;
-        text-shadow: 0 0 10px #00f7ff;
+        color: #ff8fab !important;
     }
 
-.welcome-user {
-    color: #00ff9c !important;
-    font-weight: 600;
+/* 💌 CARDS */
+.login-card,
+.about-card,
+.feedback-card {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #ffc2d1;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2);
 }
 
-.admin-link {
-    color: #ffc107 !important;
-    font-weight: bold;
-}
-
-.logout-btn {
-    color: #ff4d4d !important;
-}
-
-.btn-nav {
-    padding: 8px 20px;
-    border: 1px solid #00f7ff;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-    transition: 0.3s;
-}
-
-    .btn-nav:hover {
-        background: #00f7ff;
-        color: black;
-        box-shadow: 0 0 15px #00f7ff;
-    }
-
-.btn-nav-primary {
-    padding: 8px 20px;
-    border-radius: 8px;
-    background: linear-gradient(45deg,#00f7ff,#007bff);
-    color: white;
-    text-decoration: none;
-}
-
-    .btn-nav-primary:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px #00f7ff;
-    }
-
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-}
-
-.login-card {
-    background: rgba(10,15,40,0.75);
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid rgba(0,255,255,0.3);
-    box-shadow: 0 0 25px rgba(0,255,255,0.15);
-    width: 350px;
-}
-
+/* 🧁 INPUTS */
 .login-input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(0,255,255,0.3);
-    border-radius: 8px;
-    color: white;
+    border-radius: 15px;
+    border: 1px solid #ffc2d1;
+    background: #fff;
 }
 
     .login-input:focus {
-        outline: none;
-        border-color: #00f7ff;
-        box-shadow: 0 0 10px #00f7ff;
+        border-color: #ff8fab;
+        box-shadow: 0 0 10px #ffc2d1;
     }
 
-.login-buttons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.login-text {
-    margin-top: 20px;
-}
-
-.login-message {
-    margin-top: 15px;
-    color: #ff6b6b;
-    font-weight: 600;
-}
-
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
-}
-
-.about-card {
-    max-width: 800px;
-    padding: 40px;
-    background: rgba(10,15,40,0.75);
-    border-radius: 15px;
-    border: 1px solid rgba(0,255,255,0.3);
-    box-shadow: 0 0 25px rgba(0,255,255,0.15);
+/* 🌼 FOOTER */
+.footer-robo {
+    background: linear-gradient(135deg, #ffe4ec, #e0c3fc);
+    padding: 50px 0;
     text-align: center;
+    color: #5a4a5a;
+    border-top: 1px solid #ffc2d1;
 }
 
-.about-title {
-    color: #00f7ff;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #00f7ff;
+.footer-brand {
+    font-size: 28px;
+    color: #ff8fab;
 }
 
-.about-text {
-    margin-bottom: 15px;
-    color: #ccc;
+.footer-btn {
+    margin: 5px; /* menor espaçamento entre os botões */
+    padding: 8px 15px; /* botões menores */
+    border-radius: 15px; /* mantém o arredondado, mas menor */
+    background: #ffafcc;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* texto menor nos botões */
+    transition: 0.3s;
 }
 
-.about-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.stat-box {
-    background: rgba(0,0,0,0.3);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,255,255,0.2);
-}
-
-    .stat-box h2 {
-        color: #00f7ff;
+    .footer-btn:hover {
+        background: #ff8fab;
+        box-shadow: 0 5px 15px rgba(255, 143, 171, 0.4);
     }
 
-.feedback-container {
-    text-align: center;
-    padding: 40px;
-}
-
-.feedback-title {
-    color: #00f7ff;
-    margin-bottom: 30px;
-    text-shadow: 0 0 10px #00f7ff;
-}
-
+/* 🌟 FEEDBACK GRID */
 .feedback-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.feedback-card {
-    background: rgba(10,15,40,0.75);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(0,255,255,0.2);
-    transition: 0.3s;
+.feedback-card:hover {
+    transform: translateY(-5px);
 }
-
-    .feedback-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px rgba(0,255,255,0.4);
-    }

@@ -1,13 +1,13 @@
 ﻿new Typed("#typed", {
 
     strings: [
-        "Robôs de combate",
-        "Automação inteligente",
-        "Tecnologia do futuro",
+        "Personalize do seu jeito",
+        "Mostre seu amor pela música",
+        "Estilo único para fãs de verdade",
     ],
 
-    typeSpeed: 50,
-    backSpeed: 30,
+    typeSpeed: 30,
+    backSpeed: 25,
     loop: true
 
 });
